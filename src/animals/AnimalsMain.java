@@ -28,5 +28,26 @@ public class AnimalsMain {
         // change a field with a set method and print again
         animals[3].setName("Chiplet");
         System.out.println(animals[3]);
+
+        // array of AnimalBehavior references, with the three lowest classes
+        AnimalBehavior[] behaviors = new AnimalBehavior[3];
+        behaviors[0] = new Dog("Rex", 4, "Brown", "Labrador");
+        behaviors[1] = new Pigeon("Coo", 2, "Grey", "Rock pigeon");
+        behaviors[2] = new Blowfish("Puff", 1, "Salt water", "Spotted");
+
+        // call sleep() on individual indexes
+        behaviors[0].sleep();
+        behaviors[1].sleep();
+        behaviors[2].sleep();
+
+        // foreach loop on the Animal array calling move()
+        for (Animal animal : animals) {
+            animal.move();
+        }
+
+        // foreach loop calling the static name() method with getName()
+        for (Animal animal : animals) {
+            AnimalName.name(animal.getName());
+        }
     }
 }

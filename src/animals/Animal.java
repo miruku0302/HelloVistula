@@ -1,6 +1,6 @@
 package animals;
 
-public abstract class Animal {
+public abstract class Animal implements AnimalMove {
     private String name;
     private int age;
     private double weight;

@@ -1,6 +1,6 @@
 package animals;
 
-public class Pigeon extends Bird {
+public class Pigeon extends Bird implements AnimalBehavior {
     private String species;
 
     public Pigeon() {
@@ -37,5 +37,15 @@ public class Pigeon extends Bird {
     @Override
     public String toString() {
         return super.toString() + ", species=" + species;
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(getName() + " sleeps on a roof.");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Pigeon flies.");
     }
 }

@@ -1,6 +1,6 @@
 package animals;
 
-public class Blowfish extends Fish {
+public class Blowfish extends Fish implements AnimalBehavior {
     private String skinPattern;
 
     public Blowfish() {
@@ -37,5 +37,15 @@ public class Blowfish extends Fish {
     @Override
     public String toString() {
         return super.toString() + ", skinPattern=" + skinPattern;
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(getName() + " sleeps near the sea floor.");
+    }
+
+    @Override
+    public void move() {
+        System.out.println("Blowfish swims.");
     }
 }
